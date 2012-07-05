@@ -1,0 +1,64 @@
+{
+  "dependencies": [
+
+  ],
+  "project_page": "https://github.com/sessionm/puppet-djbdns",
+  "license": "Apache 2.0",
+  "checksums": {
+    "manifests/init.pp": "e8c08c0ccf26c19ab5271739283e30b7",
+    "manifests/zone.pp": "2cf366c7d56dc3e976651180e6386b88",
+    "lib/puppet/provider/tinydns_record/tinydns_record.rb": "9b61fe7523df6d76e57f098d5ca1bd2c",
+    "tests/init.pp": "670d41bd9622e23e33b56a5f55d53f81",
+    "manifests/dnscache.pp": "cec3393d6ea423df3b468d594620cbcd",
+    "manifests/tinydns.pp": "fa6ad83ac34c8ad7ea75b02a23a4f408",
+    "manifests/params.pp": "a099459d6c6f18fa1546db8fd98134fb",
+    "manifests/packages.pp": "ba0c388a3840e1b93a76273e127c1da8",
+    "README.md": "c86a062ddeafe15b1524b5696ecce2ea",
+    "manifests/zonedata.pp": "53e3f0fa04e79a7597f0660858b96d5c",
+    "lib/puppet/type/tinydns_record.rb": "218bd3b7aa1a6aa3b8aca7d81960e947",
+    "LICENSE": "611379e7bb65fefc71f6b707c3d9afe6",
+    "Modulefile": "e183217ba78cb2f296f4eb213166fe6e"
+  },
+  "source": "UNKNOWN",
+  "description": "Module to install and configure djbdns",
+  "summary": "UNKNOWN",
+  "name": "sessionm-djbdns",
+  "types": [
+    {
+      "providers": [
+        {
+          "name": "tinydns_record",
+          "doc": "Provides management of tinydns records via commands where possible\n\nRequired binaries: `/usr/bin/make`."
+        }
+      ],
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "DNS Record FQDN"
+        },
+        {
+          "name": "recordtype",
+          "doc": "Type of DNS record  Valid values are `soa`, `childns`, `host`, `alias`, `mx`, `text`, `ptr`."
+        },
+        {
+          "name": "ip",
+          "doc": "IP address of the host"
+        },
+        {
+          "name": "ttl",
+          "doc": "TTL of DNS entry"
+        }
+      ],
+      "name": "tinydns_record",
+      "properties": [
+        {
+          "name": "ensure",
+          "doc": "The basic property that the resource should be in.  Valid values are `present`, `absent`."
+        }
+      ],
+      "doc": "Create a record in the tinydns system"
+    }
+  ],
+  "author": "sessionm",
+  "version": "0.0.1"
+}
